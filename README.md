@@ -51,7 +51,7 @@ string result = NakuYun.Invoke(task);
 
 |code|message||
 |---------------|---------------|---------------|
-|0| success|调用成功<br>//-当NakuYunApp未启动时，会主动唤起App，并调用打印。<br>-当NakuYunApp启动时，会直接调用打印。<br>**目前NakuYunApp打印功能未完成，调用后通过右下角任务栏气泡表示调用成功**
+|0| success|调用成功<br>-当NakuYunApp未启动时，会主动唤起App，并调用打印。<br>-当NakuYunApp启动时，会直接调用打印。<br>**目前NakuYunApp打印功能未完成，调用后通过右下角任务栏气泡表示调用成功**
 |1| NakuYun Not Found.|未发现NakuYunApp安装路径
 |2| NakuYun Not Installed.|未发现NakuYunApp程序
 |3| Print File Not Found.|打印文件路径错误
