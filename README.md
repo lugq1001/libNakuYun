@@ -1,9 +1,8 @@
 # libNakuYun
 
 #### 文件目录
-- **libNakuYun.dll**. C#动态链接库，用于调用NakuYunApp
-- **DLLSample.exe**. 演示程序
-- **DLLSample**. 演示程序工程
+- **libNakuYun.exe**. 外部调用文件
+- **sample.bat**. 命令行示例
 - **NakuYunApp.msi**. NakuYunAp安装文件
 
 #### Required
@@ -12,38 +11,43 @@
 
 #### Usage
 ```c#
-# using libNakuYun;
-# using libNakuYun.Print;
+# 参数: -print [FilePath] [Copy] [Paper] [Side]
 
- 
-1.构造打印设置
-PrintPreference preference = new PrintPreference
-{
-    // 打印份数
-    copy = 1,
-    // 纸张类型
-    paperKind = PrintPreference.PaperKind.A4,
-    // 单双面
-    side = PrintPreference.Side.OneSide
-};
+libNakuYun.exe -print "D:\text.txt" 1 4 0
 
- 
-2.创建打印任务
-/// <param name="filePath">本地文件绝对路径</param>
-/// <param name="preference">打印设置</param>
-PrintTask task = new PrintTask(@"C:\test.pdf", preference);
+[FilePath]:文件绝对路径
+[Copy]:打印份数
+[Paper]:纸张类型
+0 : A0,
+1 : A1,
+2 : A2,
+3 : A3,
+4 : A4,
+5 : A5,
+6 : A6,
+7 : A7,
+8 : A8,
+9 : A9,
+10 : B0,
+11 : B1,
+12 : B2,
+13 : B3,
+14 : B4,
+15 : B5,
+16 : B6,
+17 : B7,
+18 : B8,
+19 : B9,
+20 : B10,
+21 : C3,
+22 : C4,
+23 : C5,
+24 : C6
 
-
-3.调用打印
-/// <param name="task">目前仅存在PrintTask</param>
-/// <returns>
-/// 以{code}::{message}格式返回字符串
-/// </returns>
-string result = NakuYun.Invoke(task);
-// 返回值如下: 
-// "0::success"; 
-// "1::NakuYun Not Found."
-// ...
+[Side]：单/双面
+0 : 单面
+1 : 双面 旋转长边页面
+2 : 双面 旋转短边页面
 
 ```
 
