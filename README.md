@@ -11,9 +11,11 @@
 
 #### Usage
 ```c#
-# 参数: -print [FilePath] [Copy] [Paper] [Side]
-
+/// CMD
 libNakuYun.exe -print "D:\text.txt" 1 4 0
+
+# 参数:
+-print [FilePath] [Copy] [Paper] [Side]
 
 [FilePath]:文件绝对路径
 [Copy]:打印份数
@@ -49,6 +51,12 @@ libNakuYun.exe -print "D:\text.txt" 1 4 0
 1 : 双面 旋转长边页面
 2 : 双面 旋转短边页面
 
+***
+# 返回值如下: 
+// "0::success"; 
+// "1::NakuYun Not Found."
+// ...
+
 ```
 
 #### 返回值说明
@@ -59,4 +67,5 @@ libNakuYun.exe -print "D:\text.txt" 1 4 0
 |1| NakuYun Not Found.|未发现NakuYunApp安装路径
 |2| NakuYun Not Installed.|未发现NakuYunApp程序
 |3| Print File Not Found.|打印文件路径错误
+|4| Args Invalid.|参数错误
 |-1|{Exception.Message}|代码异常
