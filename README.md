@@ -12,44 +12,10 @@
 #### Usage
 ```c#
 /// CMD
-libNakuYun.exe -print "D:\text.txt" 1 4 0
+libNakuYun.exe -print "D:\text.txt" 1 4 1 1
 
 # 参数:
--print [FilePath] [Copy] [Paper] [Side]
-
-[FilePath]:文件绝对路径
-[Copy]:打印份数
-[Paper]:纸张类型
-0 : A0,
-1 : A1,
-2 : A2,
-3 : A3,
-4 : A4,
-5 : A5,
-6 : A6,
-7 : A7,
-8 : A8,
-9 : A9,
-10 : B0,
-11 : B1,
-12 : B2,
-13 : B3,
-14 : B4,
-15 : B5,
-16 : B6,
-17 : B7,
-18 : B8,
-19 : B9,
-20 : B10,
-21 : C3,
-22 : C4,
-23 : C5,
-24 : C6
-
-[Side]：单/双面
-0 : 单面
-1 : 双面 旋转长边页面
-2 : 双面 旋转短边页面
+-print [Path] [Copies] [PaperSize] [Orientation] [Color]
 
 ***
 # 返回值如下: 
