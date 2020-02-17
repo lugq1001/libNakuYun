@@ -12,7 +12,7 @@
 #### Usage
 ```c#
 /// CMD
-libNakuYun.exe -print "D:\text.txt" 1 4 1 1
+libNakuYun.exe -print "D:\text.txt" 1 9 1 1
 
 # 参数:
 -print [Path] [Copies] [PaperSize] [Orientation] [Color]
